@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "remla-ml-group3"
+name = "lib_version_group3"
 version = "0.1.0"
 description = ""
 authors = ["smtan <tan.stevenmitchell@gmail.com>"]
