@@ -1,5 +1,10 @@
-# pylint: disable=all
+"""
+This module initializes the `lib_version_group3` package.
 
-from .version import VersionUtil
+It provides access to the VersionUtil and the version string of the library.
+"""
 
-__all__ = ["VersionUtil"]
+
+from .version import __version__, VersionUtil
+
+__all__ = ["VersionUtil", "__version__"]
