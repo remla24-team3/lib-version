@@ -5,7 +5,7 @@ description = ""
 authors = ["smtan <tan.stevenmitchell@gmail.com>"]
 license = "MIT License"
 readme = "README.md"
-package-mode = false
+package-mode = true
 
 [tool.poetry.dependencies]
 python = ">=3.8,<3.13"
