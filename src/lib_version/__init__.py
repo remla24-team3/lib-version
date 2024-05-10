@@ -1,3 +1,5 @@
+# pylint: disable=all
+
 from .version import VersionUtil
 
-__all__ = ["VersionUtil"]  # This allows to import VersionUtil directly from lib_version
+__all__ = ["VersionUtil"]

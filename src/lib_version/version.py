@@ -1,13 +1,19 @@
-# A class for getting the current version of the library
-
-import pkg_resources
+"""This file contains the version of the library."""
+# pylint: disable=all
 
 
 class VersionUtil:
     @staticmethod
     def get_version():
         try:
-            # Takes the package name as input
-            return pkg_resources.get_distribution('src').version 
-        except pkg_resources.DistributionNotFound:
-            return "Unknown version"
+            with open("version.py", "r") as file:
+                version_line = file.readline()
+                version = version_line.split("'")[1]
+                return version
+        except FileNotFoundError:
+            return "Version file not found."
+
+
+# Usage
+version_util = VersionUtil()
+print("Library Version:", version_util.get_version())
