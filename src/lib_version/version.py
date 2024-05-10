@@ -1,16 +1,13 @@
-# A function for getting the current version of the library
+# A class for getting the current version of the library
+
+import pkg_resources
+
 
 class VersionUtil:
     @staticmethod
     def get_version():
-        """
-        Retrieves the current version of the library from a VERSION file or other source.
-
-        Returns:
-            str: A string representing the version.
-        """
         try:
-            with open("VERSION", "r") as version_file:
-                return version_file.read().strip()
-        except FileNotFoundError:
-            return "unknown"  # Fallback version if the VERSION file is not found
+            # Takes the package name as input
+            return pkg_resources.get_distribution('src').version 
+        except pkg_resources.DistributionNotFound:
+            return "Unknown version"
