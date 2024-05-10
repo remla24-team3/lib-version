@@ -3,6 +3,7 @@
 import unittest
 from lib_version_group3.version import VersionUtil, __version__
 
+
 class TestVersionUtil(unittest.TestCase):
     """Tests for verifying the functionality of the VersionUtil class."""
 
@@ -14,6 +15,7 @@ class TestVersionUtil(unittest.TestCase):
         self.assertEqual(received_version, expected_version,
                          "The version returned by VersionUtil.get_version() "
                          "should match the __version__ constant.")
+
 
 if __name__ == '__main__':
     unittest.main()
