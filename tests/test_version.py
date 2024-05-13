@@ -1,3 +1,5 @@
+# pylint: disable=all
+
 """Unit tests for the VersionUtil class in the lib_version_group3 package."""
 
 import unittest
