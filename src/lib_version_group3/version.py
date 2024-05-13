@@ -9,6 +9,7 @@ version, making it useful for logs, debugging, and runtime checks.
 
 from importlib.metadata import version, PackageNotFoundError
 
+
 class VersionUtil:
     """
     Utility class for handling version information of the
