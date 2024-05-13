@@ -1,3 +1,5 @@
+# pylint: disable=R0903
+
 """Module for managing the version of the lib_version_group3 package.
 
 This module provides a class that allows for easy retrieval of the package's
@@ -17,7 +19,8 @@ class VersionUtil:
         """Retrieve the current version of the lib_version_group3 package.
 
         Returns:
-            str: The version of the lib_version_group3 package if found, otherwise returns 'Package not found'.
+            str: The version of the lib_version_group3 package if found,
+            otherwise returns 'Package not found'.
         """
         package_name = "lib_version_group3"
         try:
