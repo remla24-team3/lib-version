@@ -5,21 +5,22 @@ version, making it useful for logs, debugging, and runtime checks.
 """
 
 
+from importlib.metadata import version, PackageNotFoundError
+
 class VersionUtil:
     """
     Utility class for handling version information of the
     lib_version_group3 package.
     """
-    # pylint: disable=R0903
-
     @staticmethod
     def get_version():
-        """Retrieve the current version of the library.
+        """Retrieve the current version of the lib_version_group3 package.
 
         Returns:
-            str: The current library version.
+            str: The version of the lib_version_group3 package if found, otherwise returns 'Package not found'.
         """
-        return __version__
-
-
-__version__ = '0.0.1'
+        package_name = "lib_version_group3"
+        try:
+            return version(package_name)
+        except PackageNotFoundError:
+            return "Package not found"
