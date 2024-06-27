@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "lib_version_group3"
-version = "0.1.4"
+version = "0.1.5"
 description = "A Python library for managing and retrieving the software version."
 authors = ["smtan <tan.stevenmitchell@gmail.com>"]
 license = "MIT"
