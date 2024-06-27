@@ -53,20 +53,20 @@ jobs:
         echo "VERSION=$VERSION" >> $GITHUB_ENV
       
     - name: Create release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VERSION: ${{ env.VERSION }}
-          REPO: ${{ github.repository }}
-        run: |
-          IS_PRERELEASE=false
-          if [[ $VERSION == *-* ]]; then
-            IS_PRERELEASE=true
-          fi
-          gh release create "$VERSION" \
-              --repo="$REPO" \
-              --title="${REPO#*/} ${VERSION#v}" \
-              --generate-notes \
-              $([[ $IS_PRERELEASE == true ]] && echo "--prerelease")
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        VERSION: ${{ env.VERSION }}
+        REPO: ${{ github.repository }}
+      run: |
+        IS_PRERELEASE=false
+        if [[ $VERSION == *-* ]]; then
+          IS_PRERELEASE=true
+        fi
+        gh release create "$VERSION" \
+            --repo="$REPO" \
+            --title="${REPO#*/} ${VERSION#v}" \
+            --generate-notes \
+            $([[ $IS_PRERELEASE == true ]] && echo "--prerelease")
 
     - name: Set up Python
       uses: actions/setup-python@v3
